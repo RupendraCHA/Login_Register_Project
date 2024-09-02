@@ -11,7 +11,7 @@ ul {
   list-style-type: none;
   gap: 20px;
   font-size: 25px;
-  font-weight: 700;
+  font-weight: normal;
 }
 li:hover {
   text-decoration: underline;
@@ -23,6 +23,7 @@ li:hover {
   overflow: auto;
   /* padding-top: 100px; */
   padding-bottom: 100px;
+  opacity: 0.9;
 }
 .button-size {
   margin-right: 20px;

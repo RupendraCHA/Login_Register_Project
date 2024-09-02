@@ -24,10 +24,10 @@ function SignUp() {
 
     return (
         <div className='bg-container d-flex justify-content-center align-items-center vh-100'>
-            <div className='bg-danger p-4 rounded-4 w-25'>
-                <h2>Register</h2>
+            <div className='bg-danger p-4 rounded-4 w-25' style={{ opacity: "0.8" }}>
+                <h2 className='text-white'>Register</h2>
                 <form onSubmit={handleSubmit}>
-                    <div className='mb-3'>
+                    <div className='mb-3 text-white'>
                         <label htmlFor="name">
                             <strong>Name</strong>
                         </label>
@@ -40,7 +40,7 @@ function SignUp() {
 
                         />
                     </div>
-                    <div className='mb-3'>
+                    <div className='mb-3 text-white'>
                         <label htmlFor="email">
                             <strong>Email</strong>
                         </label>
@@ -52,7 +52,7 @@ function SignUp() {
                             onChange={(e) => setEmail(e.target.value)}
                         />
                     </div>
-                    <div className='mb-3'>
+                    <div className='mb-3 text-white'>
                         <label htmlFor="password">
                             <strong>Password</strong>
                         </label>
@@ -69,7 +69,7 @@ function SignUp() {
                         Register
                     </button>
                 </form>
-                <p>Already have an account?</p>
+                <p className='text-white'>Already have an account?</p>
                 <Link to="/login" className='btn btn-default border w-100 bg-success rounded-0 text-decoration-none' style={{ fontWeight: "600" }}>
                     Login
                 </Link>

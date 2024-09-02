@@ -10,23 +10,26 @@ function InitialPage() {
                     <div>
                         <img src='https://res.cloudinary.com/dvxkeeeqs/image/upload/v1724952055/logo-removebg-preview_prabm4.png' className='image-size' />
                     </div>
-                    <ul className='d-flex flex-row justify-content-between align-items-center text-white'>
+                    {/* <ul className='d-flex flex-row justify-content-between align-items-center text-white'>
                         <li>Product</li>
                         <li>Usecases</li>
                         <li>Industries</li>
                         <li>Contact</li>
-                    </ul>
+                    </ul> */}
                     <div className='d-flex flex-row'>
                         <div className='button-size'>
-                            <Link to="/register" className='bg-warning rounded-4 p-2 text-white' style={{ fontWeight: 700, textDecoration: "none" }}>Sign Up</Link>
+                            <Link to="/register" className='bg-warning rounded-4 p-2 text-white'
+                                style={{ fontWeight: 500, textDecoration: "none" }}>Sign Up</Link>
                         </div>
-
                         <div>
-                            <Link to="/login" className='bg-success rounded-4 p-2 text-white' style={{ fontWeight: 700, textDecoration: "none" }}>Login</Link>
+                            <Link to="/login" className='bg-success rounded-4 p-2 text-white' style={{ fontWeight: 500, textDecoration: "none" }}>Login</Link>
                         </div>
                     </div>
                 </div>
                 <div className='d-flex flex-column justify-content-center align-items-center' style={{ paddingTop: "200px" }}>
+                    <h1 className='text-center text-white' style={{ fontSize: "40px", marginBottom: "50px" }}>"Artificial
+                        Intelligence" & "Machine Learning" Solutions in Supply Chain Injecting Data
+                        From Diverse ERP & Non-ERP Sources.</h1>
                     <div className='text-center'>
                         <h3 className='text-white'>Don't have an account, Create it by clicking register...</h3>
                         <Link to="/register">
