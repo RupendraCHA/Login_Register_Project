@@ -4,6 +4,7 @@ import SignUp from './SignIn/signUp'
 import Login from './Login/Login'
 import Home from './Home'
 import InitialPage from './InitialPage/InitialPage'
+import DataModels from './dataModels/dataModels.jsx'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Route path='/register' element={<SignUp />}></Route>
         <Route path='/login' element={<Login />}></Route>
         <Route path='/home' element={<Home />}></Route>
+        <Route path='/dataModels' element={<DataModels />}></Route>
       </Routes>
     </BrowserRouter>
   )
