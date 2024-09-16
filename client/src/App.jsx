@@ -5,6 +5,7 @@ import Login from './Login/Login'
 import Home from './Home'
 import InitialPage from './InitialPage/InitialPage'
 import DataModels from './dataModels/dataModels.jsx'
+import NotFound from './NotFound/NotFound.jsx'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 function App() {
@@ -13,11 +14,12 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<InitialPage />}></Route>
-        <Route path='/register' element={<SignUp />}></Route>
-        <Route path='/login' element={<Login />}></Route>
-        <Route path='/home' element={<Home />}></Route>
-        <Route path='/dataModels' element={<DataModels />}></Route>
+        <Route exact path='/' element={<InitialPage />}></Route>
+        <Route exact path='/register' element={<SignUp />}></Route>
+        <Route exact path='/login' element={<Login />}></Route>
+        <Route exact path='/home' element={<Home />}></Route>
+        <Route exact path='/dataModels' element={<DataModels />}></Route>
+        <Route path="*" element={<NotFound />}></Route>
       </Routes>
     </BrowserRouter>
   )
