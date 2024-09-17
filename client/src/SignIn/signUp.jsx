@@ -24,7 +24,7 @@ function SignUp() {
 
     return (
         <div className='bg-container d-flex justify-content-center align-items-center vh-100'>
-            <div className='bg-danger p-4 rounded-4 w-25' style={{ opacity: "0.8" }}>
+            <div className='bg-danger p-4 rounded-4 register-card' style={{ opacity: "0.8" }}>
                 <h2 className='text-white'>Register</h2>
                 <form onSubmit={handleSubmit}>
                     <div className='mb-3 text-white'>

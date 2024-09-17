@@ -10,22 +10,22 @@ function Home() {
                         className='w-100 mt-3 mb-3 rounded-2' />
                     
                 </a> */}
-                <h1 style={{ padding: "20px", fontWeight: "bold", fontFamily: "Roboto", borderRadius: "12px", backgroundColor: "white", border: "3px solid #ff0000" }}>Hanelytics</h1>
+                <h1 style={{ padding: "20px", color: "#fff", fontWeight: "bold", fontFamily: "Roboto", borderRadius: "12px", backgroundColor: "#000", border: "3px solid #0000ff", marginBottom: "20px" }}>Hanelytics</h1>
 
             </div>
             {/* <h1 className='text-success '>
                 Welcome to the Hanelytics.
             </h1> */}
-            <h3 className='text-primary'>Make AI/ML Predictions easy with Hanelytics</h3>
+            <h3 className='text-success text-capitalize'>Make AI/ML Predictions easy with Hanelytics</h3>
             <div className='mt-4'>
 
-                <Link to="/dataModels">
+                <Link to="/dataModeling">
                     <button className='text-decoration-none text-white bg-primary rounded-4 border-none p-3 m-3' style={{ fontWeight: 700 }}>
                         Data Modeling
                     </button>
                 </Link>
                 <Link to="/login">
-                    <button className='text-decoration-none text-white bg-info rounded-4 border-none p-3' style={{ fontWeight: 700, opacity: 0.8 }}>
+                    <button className='text-decoration-none text-danger bg-warning rounded-4 border-none p-3' style={{ fontWeight: 700, opacity: 0.8 }}>
                         Logout
                     </button>
                 </Link>

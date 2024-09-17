@@ -6,7 +6,7 @@ function InitialPage() {
     return (
         <>
             <div className='bg-container'>
-                <div className='container d-flex flex-row justify-content-between align-items-center vw-100'>
+                <div className='container responsive-container'>
                     <div>
                         <img src='https://res.cloudinary.com/dvxkeeeqs/image/upload/v1724952055/logo-removebg-preview_prabm4.png' className='image-size' />
                         {/* <img src='https://res.cloudinary.com/dvxkeeeqs/image/upload/v1726505185/istockphoto-1407983911-612x612_hi0th1.jpg' className='image-size' /> */}
@@ -23,7 +23,8 @@ function InitialPage() {
                                 style={{ fontWeight: 500, textDecoration: "none" }}>Sign Up</Link>
                         </div>
                         <div>
-                            <Link to="/login" className='bg-success rounded-4 p-2 text-white' style={{ fontWeight: 500, textDecoration: "none" }}>Login</Link>
+                            <Link to="/login" className='bg-success rounded-4 p-2 text-white' style={{ fontWeight: 500, textDecoration: "none" }}>
+                                Login</Link>
                         </div>
                     </div>
                 </div>

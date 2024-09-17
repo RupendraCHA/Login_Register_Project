@@ -11,3 +11,8 @@
   /* padding-top: 100px; */
   padding-bottom: 100px;
 }
+@media screen and (min-width: 576px) {
+  .login-card {
+    width: 25%;
+  }
+}

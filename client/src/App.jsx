@@ -5,6 +5,7 @@ import Login from './Login/Login'
 import Home from './Home'
 import InitialPage from './InitialPage/InitialPage'
 import DataModels from './dataModels/dataModels.jsx'
+import DataModeling from './DataModelingPage/DataModeling.jsx'
 import NotFound from './NotFound/NotFound.jsx'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
@@ -19,6 +20,7 @@ function App() {
         <Route exact path='/login' element={<Login />}></Route>
         <Route exact path='/home' element={<Home />}></Route>
         <Route exact path='/dataModels' element={<DataModels />}></Route>
+        <Route exact path='/dataModeling' element={<DataModeling />}></Route>
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
     </BrowserRouter>

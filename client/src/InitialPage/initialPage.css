@@ -3,6 +3,18 @@
   margin: 0;
   box-sizing: border-box;
 }
+.responsive-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 576px) {
+  .responsive-container {
+    flex-direction: column;
+    justify-content: center;
+  }
+}
 .image-size {
   height: 300px;
   width: 500px;

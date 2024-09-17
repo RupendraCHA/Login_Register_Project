@@ -11,3 +11,9 @@
   /* padding-top: 100px; */
   padding-bottom: 100px;
 }
+
+@media screen and (min-width: 576px) {
+  .register-card {
+    width: 25%;
+  }
+}
