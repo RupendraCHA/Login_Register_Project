@@ -29,8 +29,8 @@ function BarChart() {
     })
 
     return (
-        <div id='app'>
-            <div style={{ width: 500 }}>
+        <div className='bar-chart-container'>
+            <div style={{ width: 550 }}>
                 <BarChartItem chartData={userData} />
             </div>
 

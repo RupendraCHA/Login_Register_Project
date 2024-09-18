@@ -3,13 +3,13 @@
   margin: 0;
   box-sizing: border-box;
 }
-#app {
+.pie-chart-container {
   margin: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   /* height: auto; */
-  background-color: #b4b7ae;
+  /* background-color: #a886ac; */
   border-radius: 12px;
   padding: 12px;
 }

@@ -18,7 +18,7 @@ export const usersData = [
     ,
     {
         id: 4,
-        category: "Generals",
+        category: "Generic drugs",
         revenue: 1698700,
     }
     // ,
