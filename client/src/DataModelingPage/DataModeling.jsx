@@ -2,6 +2,8 @@ import React from 'react'
 import "./DataModeling.css"
 import { FaRegCircleUser } from "react-icons/fa6";
 import DatasetItem from "./../DatasetsItem/DatasetsItem.jsx"
+import BarChart from "./../BarChartPage/BarChart.jsx"
+import PieChart from "./../PieChartPage/PieChart.jsx"
 
 const DataModeling = () => {
 
@@ -39,8 +41,15 @@ const DataModeling = () => {
                         return <DatasetItem dataset={dataset} />
                     })}
                 </ul>
-                <section className='dataset-section'>
-                    Datasets
+                <section className='charts-section'>
+                    <div className='charts-container'>
+                        <div className='pie-chart'>
+                            <PieChart />
+                        </div>
+                        <div className='bar-chart'>
+                            <BarChart />
+                        </div>
+                    </div>
                 </section>
             </div>
         </div>

@@ -6,7 +6,7 @@ const DatasetsItem = (props) => {
     const { dataset } = props
 
     return (
-        <li className='dataset-item'>
+        <li>
             <button className='dataset-button'>{`Upload ${dataset}`}</button>
         </li>
     )

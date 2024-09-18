@@ -1,0 +1,15 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+#app {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: auto; */
+  background-color: #94a9ac;
+  border-radius: 12px;
+  padding: 12px;
+}
