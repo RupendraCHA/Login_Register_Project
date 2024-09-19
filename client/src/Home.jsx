@@ -1,7 +1,35 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import axios from 'axios'
+import React, { useEffect } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 
 function Home() {
+
+    const navigate = useNavigate()
+
+    axios.defaults.withCredentials = true;
+    useEffect(() => {
+        axios.get('http://localhost:3001/home')
+            .then(result => {
+                console.log(result)
+                if (result.data !== "Successful") {
+                    navigate("/login")
+                } else {
+                    navigate("/home")
+                }
+
+            })
+            .catch(err => console.log(err))
+    }, [])
+
+    const handleLogout = () => {
+        axios.get("http://localhost:3001/logout")
+            .then(result => {
+                if (result.data === "Logged Out") {
+                    navigate("/login")
+                }
+            })
+    }
+
     return (
         <div className='bg-dark d-flex flex-column justify-content-center align-items-center vh-100'>
             <div>
@@ -13,9 +41,6 @@ function Home() {
                 <h1 style={{ padding: "20px", color: "#fff", fontWeight: "bold", fontFamily: "Roboto", borderRadius: "12px", backgroundColor: "#000", border: "3px solid #0000ff", marginBottom: "20px" }}>Hanelytics</h1>
 
             </div>
-            {/* <h1 className='text-success '>
-                Welcome to the Hanelytics.
-            </h1> */}
             <h3 className='text-success text-capitalize'>Make AI/ML Predictions easy with Hanelytics</h3>
             <div className='mt-4'>
 
@@ -25,7 +50,10 @@ function Home() {
                     </button>
                 </Link>
                 <Link to="/login">
-                    <button className='text-decoration-none text-danger bg-warning rounded-4 border-none p-3' style={{ fontWeight: 700, opacity: 0.8 }}>
+                    <button className='text-decoration-none text-danger bg-warning rounded-4 border-none p-3'
+                        style={{ fontWeight: 700, opacity: 0.8 }}
+                        onClick={handleLogout}
+                    >
                         Logout
                     </button>
                 </Link>

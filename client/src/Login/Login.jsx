@@ -1,6 +1,5 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import "./logIn.css"
@@ -12,6 +11,23 @@ function Login() {
     const [failed, setFailed] = useState('')
     const navigate = useNavigate()
 
+    useEffect(() => {
+        axios.get("http://localhost:3001/home")
+            .then(result => {
+                console.log(result)
+                if (result.data !== "Successful") {
+                    navigate("/login")
+                } else {
+                    navigate("/home")
+                }
+
+            })
+            .catch(err => console.log(err))
+    }, [])
+
+
+
+    axios.defaults.withCredentials = true;
     const handleSubmit = (e) => {
         e.preventDefault()
         axios.post('http://localhost:3001/login', { email, password })
@@ -19,6 +35,8 @@ function Login() {
                 console.log(result.data)
                 if (result.data === "Success") {
                     navigate("/home")
+                } else {
+                    navigate("/login")
                 }
                 // else {
                 //     console.log("Enter Valid Details")
