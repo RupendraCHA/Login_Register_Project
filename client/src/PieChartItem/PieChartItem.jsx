@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Pie } from "react-chartjs-2"
-import { Chart as ChartJS, Tooltip, Legend, ArcElement } from "chart.js/auto"
+import { Chart as ChartJS, Tooltip, Legend, ArcElement, Colors } from "chart.js/auto"
 
 ChartJS.register(
     Tooltip,
@@ -15,11 +15,12 @@ const PieChartItem = ({ chartData }) => {
         responsive: true,
         plugins: {
             legend: {
-                position: "bottom"
+                position: "bottom",
             },
             title: {
                 display: true,
                 text: "Revenue Share of each Category",
+                color: "blue"
             }
         }
     }

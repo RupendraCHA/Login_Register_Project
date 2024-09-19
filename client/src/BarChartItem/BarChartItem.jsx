@@ -32,7 +32,8 @@ const BarChartItem = ({ chartData }) => {
             },
             title: {
                 display: true,
-                text: "Revenue Share of each Category",
+                text: "Forecasted results for Sales, Safety Stock, Reorder Quantity",
+                color: "blue"
             }
         }
     }

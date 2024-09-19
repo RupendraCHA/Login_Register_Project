@@ -16,10 +16,12 @@ function PieChart() {
             data: usersData.map((data) => data.revenue),
             backgroundColor: ["#756432", "#ff0000", "#00ff00", "#323f4b"],
             borderColor: "white",
-            borderWidth: 1
+            borderWidth: 1,
+
         }
         ],
         hoverOffset: 6
+
     })
 
     return (

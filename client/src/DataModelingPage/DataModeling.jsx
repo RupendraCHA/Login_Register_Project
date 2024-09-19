@@ -38,9 +38,16 @@ const DataModeling = () => {
                     </div>
                 </section>
                 <ul className='datasets-section'>
-                    {datasetsNames.map((dataset) => {
-                        return <DatasetItem dataset={dataset} />
-                    })}
+                    <div style={{ marginTop: "20px" }}>
+                        {datasetsNames.map((dataset) => {
+                            return <DatasetItem dataset={dataset} />
+                        })}
+                    </div>
+                    <div>
+                        <button className='compute-results'>
+                            Compute Results
+                        </button>
+                    </div>
                 </ul>
                 <div className='charts-section'>
                     <div className='charts-container'>
@@ -51,7 +58,9 @@ const DataModeling = () => {
                             <BarChart />
                         </div>
                     </div>
+                    <h1 className='results-heading'>Results:</h1>
                     <div className='table-container'>
+
                         <Table />
                     </div>
 
