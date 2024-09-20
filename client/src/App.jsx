@@ -1,6 +1,6 @@
 // import { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import SignUp from './SignIn/signUp'
+import SignUp from './Register/signUp'
 import Login from './Login/Login'
 import Home from './Home'
 import InitialPage from './InitialPage/InitialPage'

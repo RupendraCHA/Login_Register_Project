@@ -15,7 +15,7 @@ app.use(cors({
 }))
 app.use(cookieParser())
 
-mongoose.connect("mongodb://127.0.0.1:27017/Visionsoft")
+
 
 const verifyUser = (req, res, next) => {
     const token = req.cookies.token;
@@ -73,7 +73,16 @@ app.post('/register', (req, res) => {
 
 })
 
+let startDBandServer = async () => {
+    await mongoose.connect("mongodb://127.0.0.1:27017/Visionsoft")
+        .then(() => {
+            console.log("Connected to MongoDB Database!")
+        }).catch(error => {
+            console.log("Connection Failed:", error)
+        })
+    await app.listen(3001, () => {
+        console.log("Server is running")
+    })
+}
 
-app.listen(3001, () => {
-    console.log("Server is running")
-})
+startDBandServer()
